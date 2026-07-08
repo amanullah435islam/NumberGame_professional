@@ -26,13 +26,13 @@ public class Difficulty {
             switch (choice) {
 
                 case 1:
-                    return 50;
+                    return DifficultyLevel.EASY.getMaxNumber();
 
                 case 2:
-                    return 100;
+                    return DifficultyLevel.MEDIUM.getMaxNumber();
 
                 case 3:
-                    return 500;
+                    return DifficultyLevel.HARD.getMaxNumber();
 
                 default:
                     System.out.println();

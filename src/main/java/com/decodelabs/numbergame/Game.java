@@ -4,15 +4,28 @@ import java.util.Random;
 
 public class Game {
 
-    private Difficulty difficulty = new Difficulty();
+    private final Difficulty difficulty;
 
-    private InputHelper inputHelper = new InputHelper();
+    private final InputHelper inputHelper;
 
-    private Random random = new Random();
+    private final Score score;
 
-    private Score score = new Score();
+    private final Random random;
 
-    public void startGame() {
+    public Game(
+            Difficulty difficulty,
+            InputHelper inputHelper,
+            Score score,
+            Random random) {
+
+        this.difficulty = difficulty;
+        this.inputHelper = inputHelper;
+        this.score = score;
+        this.random = random;
+    }
+
+
+        public void startGame() {
 
         int maxNumber = difficulty.selectDifficulty();
 

@@ -3,7 +3,9 @@ package org.testProjectImranSir;
 import com.decodelabs.numbergame.Difficulty;
 import com.decodelabs.numbergame.Game;
 import com.decodelabs.numbergame.InputHelper;
+import com.decodelabs.numbergame.Score;
 
+import java.util.Random;
 import java.util.Scanner;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
@@ -12,8 +14,19 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Game game = new Game();
+        Difficulty difficulty = new Difficulty();
+
         InputHelper inputHelper = new InputHelper();
+
+        Score score = new Score();
+
+        Random random = new Random();
+
+        Game game = new Game(
+                difficulty,
+                inputHelper,
+                score,
+                random);
 
         boolean playAgain = true;
 
