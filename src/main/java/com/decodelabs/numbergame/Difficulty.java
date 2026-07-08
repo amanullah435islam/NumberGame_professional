@@ -4,7 +4,9 @@ import java.util.Scanner;
 
 public class Difficulty {
 
-    Scanner scanner = new Scanner(System.in);
+
+    private InputHelper inputHelper = new InputHelper();
+
 
     public int selectDifficulty() {
 
@@ -21,7 +23,7 @@ public class Difficulty {
 
             System.out.print("Enter Choice : ");
 
-            int choice = scanner.nextInt();
+            int choice = inputHelper.readInt();
 
             switch (choice) {
 
