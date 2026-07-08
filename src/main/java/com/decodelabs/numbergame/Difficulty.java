@@ -6,31 +6,43 @@ public class Difficulty {
 
     Scanner scanner = new Scanner(System.in);
 
-    public int selectDifficulty(){
+    public int selectDifficulty() {
 
-        System.out.println("=================================");
-        System.out.println("        NUMBER GAME");
-        System.out.println("=================================");
+        while (true) {
 
-        System.out.println("Choose Difficulty");
+            System.out.println("=================================");
+            System.out.println("        NUMBER GAME");
+            System.out.println("=================================");
 
-        System.out.println("1. Easy");
-        System.out.println("2. Medium");
-        System.out.println("3. Hard");
+            System.out.println("Choose Difficulty");
+            System.out.println("1. Easy");
+            System.out.println("2. Medium");
+            System.out.println("3. Hard");
 
-        System.out.print("Enter Choice : ");
+            System.out.print("Enter Choice : ");
 
-        int choice = scanner.nextInt();
+            int choice = scanner.nextInt();
 
+            switch (choice) {
 
-    //return 0;
-        if(choice == 1){
-            return 50;
-        }else if(choice == 2){
-            return 100;
-        }else{
-            return 500;
+                case 1:
+                    return 50;
+
+                case 2:
+                    return 100;
+
+                case 3:
+                    return 500;
+
+                default:
+                    System.out.println();
+                    System.out.println("Invalid Choice!");
+                    System.out.println("Please enter 1, 2 or 3.");
+                    System.out.println();
+            }
+
         }
+
     }
 
 }
