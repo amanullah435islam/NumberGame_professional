@@ -8,23 +8,19 @@ public class InputHelper {
 
 
 
-    public int readInt() {
+    public int readInt(String message) {
 
         while (true) {
 
-            if (scanner.hasNextInt()) {
+            System.out.print(message);
 
+            if (scanner.hasNextInt()) {
                 return scanner.nextInt();
 
             } else {
 
-                System.out.println();
                 System.out.println("Invalid Input!");
                 System.out.println("Please enter a valid number.");
-
-                // ami define korlam::::::
-                System.out.print("Enter Choice : ");
-
                 scanner.next();
 
             }
@@ -32,4 +28,38 @@ public class InputHelper {
         }
 
     }
-}
+
+
+
+    public String readString(String message) {
+
+        System.out.print(message);
+
+        return scanner.next().trim();
+
+    }
+
+
+
+    public boolean readYesOrNo(String message) {
+
+        while (true) {
+
+            System.out.print(message);
+
+            String input = scanner.next().trim();
+
+            if (input.equalsIgnoreCase("Y")) {
+                return true;
+            }
+
+            if (input.equalsIgnoreCase("N")) {
+                return false;
+            }
+
+            System.out.println("Invalid choice!");
+            System.out.println("Please enter Y or N.");
+        }
+
+    }
+    }

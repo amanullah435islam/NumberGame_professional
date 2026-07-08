@@ -22,9 +22,7 @@ public class Game {
 
         while (true) {
 
-            System.out.print("Enter Guess : ");
-
-            int guess = inputHelper.readInt();
+            int guess = inputHelper.readInt("Enter Guess : ");
 
             attempts++;
 

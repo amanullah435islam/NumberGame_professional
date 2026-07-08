@@ -12,9 +12,8 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Scanner scanner = new Scanner(System.in);
-
         Game game = new Game();
+        InputHelper inputHelper = new InputHelper();
 
         boolean playAgain = true;
 
@@ -22,26 +21,13 @@ public class Main {
 
             game.startGame();
 
-            System.out.println();
-            System.out.print("Do you want to play again? (Y/N): ");
-
-            String choice = scanner.next();
-
-            if (choice.equalsIgnoreCase("Y")) {
-
-                playAgain = true;
-
-            } else {
-
-                playAgain = false;
-
-            }
+            playAgain = inputHelper.readYesOrNo(
+                    "Do you want to play again? (Y/N): ");
 
         }
 
         System.out.println();
         System.out.println("Thank you for playing!");
-        scanner.close();
 
     }
 

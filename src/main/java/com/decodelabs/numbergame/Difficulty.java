@@ -21,9 +21,7 @@ public class Difficulty {
             System.out.println("2. Medium");
             System.out.println("3. Hard");
 
-            System.out.print("Enter Choice : ");
-
-            int choice = inputHelper.readInt();
+            int choice = inputHelper.readInt("Enter Choice : ");
 
             switch (choice) {
 
