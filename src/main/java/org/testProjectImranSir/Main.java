@@ -1,6 +1,7 @@
 package org.testProjectImranSir;
 
 import com.decodelabs.numbergame.Difficulty;
+import com.decodelabs.numbergame.Game;
 import com.decodelabs.numbergame.InputHelper;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
@@ -8,12 +9,12 @@ import com.decodelabs.numbergame.InputHelper;
 public class Main {
     public static void main(String[] args) {
 
-        Difficulty difficulty = new Difficulty();
-        int maxNumber = difficulty.selectDifficulty();
-        System.out.println();
-        System.out.println("Maximum Number : " + maxNumber);
+        Game game = new Game();
+        game.startGame();
+
 
     }
 
 
 }
+
