@@ -1,17 +1,52 @@
-com.decodelabs.numbergame
+# 🎮 Number Game
 
-│
+A professional Java console application developed using Core Java and Object-Oriented Programming.
 
-├── Main.java
+---
 
-├── Game.java
+## Features
 
-├── Difficulty.java
+- Difficulty Levels
+- Random Number Generation
+- Unlimited Attempts
+- Attempt Counter
+- Score Calculation
+- Play Again
+- Input Validation
+- Clean Architecture
 
-├── DifficultyLevel.java   ← NEW
+---
 
-├── Score.java
+## Technologies
 
-├── InputHelper.java
+- Java 21
+- OOP
+- Random
+- Scanner
+- Enum
+- Constructor Injection
 
-└── GameConstants.java      ← Optional
+---
+
+## Author
+
+Md. Amanullah
+
+
+
+
+
+
+Architecture :
+                 Main
+                   │
+                   ▼
+                Game
+      ┌──────────┼──────────┐
+      ▼          ▼          ▼
+ Difficulty   InputHelper   Score
+      │
+      ▼
+DifficultyLevel (enum)
+
+
